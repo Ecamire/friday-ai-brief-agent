@@ -1,0 +1,19 @@
+{
+  "name": "friday-ai-brief-agent-showcase",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "demo": "node scripts/demo.js",
+    "generate": "node scripts/generate.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.69.0",
+    "marked": "^15.0.12"
+  }
+}

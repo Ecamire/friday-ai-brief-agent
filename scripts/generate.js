@@ -1,0 +1,15 @@
+import fs from 'node:fs/promises';
+import Anthropic from '@anthropic-ai/sdk';
+import { researchWeek } from '../src/research.js';
+import { writeNewsletter } from '../src/write.js';
+import { renderHtml } from '../src/render.js';
+if (!process.env.ANTHROPIC_API_KEY || !process.env.NEWSLETTER_MODEL) throw new Error('Supply your own ANTHROPIC_API_KEY and NEWSLETTER_MODEL through a secret manager.');
+const { corpus } = await researchWeek();
+if (!corpus?.trim()) throw new Error('Research returned no usable source material.');
+const client = new Anthropic({ timeout: 120000, maxRetries: 1 });
+const { newsletter } = await writeNewsletter(corpus, client);
+const destination = new URL('../output/', import.meta.url);
+await fs.mkdir(destination, { recursive: true });
+await fs.writeFile(new URL('generated-newsletter.json', destination), JSON.stringify(newsletter, null, 2));
+await fs.writeFile(new URL('generated-newsletter.html', destination), renderHtml(newsletter));
+console.log('Generated a local preview using your own account. Nothing was sent or published.');

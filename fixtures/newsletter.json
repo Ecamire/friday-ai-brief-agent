@@ -1,0 +1,30 @@
+{
+  "issueTitle": "A useful agent starts with a clear workflow",
+  "subtitle": "Fictional stories for a local rendering demonstration.",
+  "introHook": "This sample edition shows how structured content becomes a readable newsletter. The companies and releases below are fictional.",
+  "sections": [
+    {
+      "kicker": "Sample release",
+      "heading": "Harbor Tools adds a review queue",
+      "body": "Harbor Tools is a fictional company. Its sample release illustrates a simple product decision: put a draft in front of the operator before anything moves forward.\n\n### Why it matters\nA clear review step makes the next action visible. This is demonstration content, not a reported release.",
+      "sourceUrl": "https://example.com/sample-release",
+      "sourceTitle": "Fictional release fixture",
+      "soWhat": "The workflow matters alongside the model output.",
+      "takeaway": "Make the approval step explicit."
+    },
+    {
+      "kicker": "Sample workflow",
+      "heading": "A short request becomes a consistent draft",
+      "body": "A fictional operator asks for a short summary. The agent carries context, returns structured content, and the application handles presentation. This sample does not invoke a model or connect to a business.",
+      "sourceUrl": "https://example.com/sample-workflow",
+      "sourceTitle": "Fictional workflow fixture",
+      "soWhat": "Consistent rendering keeps each edition readable.",
+      "takeaway": "Keep business rules in the application."
+    }
+  ],
+  "agentBasicsTitle": "What does structured output do?",
+  "agentBasics": "It gives application code a predictable shape to validate and render. A shape alone does not prove the facts are correct.",
+  "tryThisWeek": "Write down the inputs, output, and approval step for one repetitive task.",
+  "cta": "Inspect the code and run the local preview.",
+  "tryThisLabel": "Sample exercise"
+}

@@ -1,0 +1,5 @@
+node_modules/
+output/
+.env*
+.infisical.json
+.DS_Store
